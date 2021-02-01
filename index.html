@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial scale=1"> <!--makes the width of the site the same as the device's, initial scale sets default zoom to 1-->
+        <title>Jack Blake</title>
+        <style>
+            .wrapper{
+                position: relative;
+                color: white;
+            }
+            .wrapper a{
+                text-decoration: none;
+                color: white;
+            }
+            .wrapper a:hover{
+                color:orange;
+            }
+            .topLeft {
+                position: absolute;
+                left: 10px;
+                top: 5px;
+            }
+            .topMid{
+                position: absolute;
+                left: 50%;
+                top: 5px;
+            }
+            .topRight {
+                position: absolute;
+                right: 10px;
+                top: 5px;
+            }
+            @keyframes biggySmall0{
+                from{
+                    font-size: 15px;
+                } to {
+                    font-size: 17.25px; 
+                }
+            }
+            @keyframes biggySmall1{
+                from{
+                    font-size: 40px;
+                } to {
+                    font-size: 45px; 
+                }
+            }
+            @keyframes biggySmall2{
+                from{
+                    font-size: 20px;
+                } to {
+                    font-size: 22.5px; 
+                }
+            }
+            .midMid0{
+                position: absolute;
+                top: 239px;
+                left: 44%;
+                color: white;
+                font-size: 15px;
+                animation-name: biggySmall0;
+                animation-duration:2s;
+                animation-direction:alternate;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            }
+            .midMid1{
+                position: absolute;
+                top: 250px;
+                left: 44%;
+                color: white;
+                font-size: 40px;
+                animation-name: biggySmall1;
+                animation-duration:3s;
+                animation-direction:alternate;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            }  
+            .midMid2{
+                position: absolute;
+                top: 292px;
+                left: 44%;
+                color: white;
+                font-size: 20px; 
+                animation-name: biggySmall2;
+                animation-direction:alternate;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                animation-delay: -1.5s;
+                animation-duration:4s;
+            }
+        </style>
+    </head>
+    <body> 
+        <div class="wrapper">
+            <img src="sunset.jpg">
+            <div class="midMid0">
+                Hi, I'm
+            </div>
+            <div class="midMid1">
+                <b>Jack Blake</b>
+            </div>
+            <div class="midMid2">
+                HS Senior and beginner developer
+            </div>
+            <div class="topLeft">
+                <a href="projects.html">Projects</a>
+            </div>
+            <div class="topMid">
+                <a href="about.html">About</a>
+            </div>    
+            <div class="topRight">
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </body>
+</html>
