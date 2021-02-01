@@ -6,64 +6,144 @@
         <title>Jack Blake - Projects</title>
         <style>
             .wrapper{
-                position: relative;
-                width: 100%;
+                position: absolute;
+                margin-top: 3vw;
+                width: 75vw;
+                left: 12.5vw;
+                background-color: rgb(54, 54, 54);
+                opacity: 70%;
+                height: 125vw
             }
-            .wrapper a{
+            .wrapperProxy{
+                position: absolute;
+                margin-top: 3vw;
+                width: 75vw;
+                height: 128vw;
+                left: 12.5vw;
+                background-color: transparent;
+                color:white;
+                line-height: 4vw;
+            }
+            .wrapperProxy h1 {
+                text-align: center;
+                font-size: 5vw;
+            }
+            .wrapperProxy h2 {
+                text-align: center;
+                font-size: 3vw;
+            }
+            .wrapperProxy ul {
+                font-size: 2vw; 
+            }
+            .wrapperProxy img {
+                width: 50vw; 
+                height: 25vw;
+                margin-left: 12.5vw;
+            }
+            .wrapperProxy a{
+                color:lightgreen;
+            }
+            a{
                 text-decoration: none;
                 color: white;
             }
-            .wrapper a:hover{
+            a:hover{
                 color:orange;
             }
             .topLeft {
                 position: absolute;
-                left: 10px;
-                top: 5px;
+                left: 1vw;
+                top: 0.5vw;
             }
             .topMid{
                 position: absolute;
-                left: 50%;
-                top: 5px;
+                left: 45vw;
+                top: 0.5vw;
             }
             .topRight {
                 position: absolute;
-                right: 10px;
-                top: 5px;
+                right: 1vw;
+                top: 0.5vw;
             }
-            .midMid{
-                position: absolute;
-                top: 10%;
-                left: 30%;
-                color: white;
-                font-size: 40px;
-            }  
-            .midMid a{
-                font-size: 15px;
-                color:mediumorchid;
-            }
-            .wrapper img{
-                width:100%;
-
+            body{
+                background-image: url('bg.gif');
+                background-attachment: fixed;
+                font-family: 'Courier New', Courier, monospace;
             }
         </style>
     </head>
     <body> 
-        <div class="wrapper">
+        <div class="topLeft">
+            <a href="index.html">Main</a>
+        </div>
+        <div class="topMid">
+            <a href="#">About</a>
+        </div>    
+        <div class="topRight">
+            <a href="#">Contact</a>
+        </div>
+        
+        <div class="wrapper"></div>
+        <div class="wrapperProxy">
+            <h1>Projects</h1>
+            <hr>
+            <ul>
+                <li>
+                    <b>Technologies:</b>
+                    <ul>
+                        <li>
+                            I want to countinue learning in 2021
+                            <ul>
+                                <li>
+                                    Java, HTML / CSS
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            I want to start learning in 2021
+                            <ul>
+                                <li>
+                                    JavaScript, React.js
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            I'm already experienced in
+                            <ul>
+                                <li>
+                                    None
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Finished Projects:</b>
+                </li>
+            </ul>
+            <hr>
+            <h2>
+                Hypixel Skywars Kill Alert
+            </h2>
             <img src="Ex.gif">
-            <div class="midMid">
-                WIP <br>
-                <a href="Sky Wars Kill Alert-1.0.jar" download>Download</a>
-            </div>
-            <div class="topLeft">
-                <a href="index.html">Main</a>
-            </div>
-            <div class="topMid">
-                <a href="about.html">About</a>
-            </div>    
-            <div class="topRight">
-                <a href="contact.html">Contact</a>
-            </div>
+            <ul>
+                <li>
+                    Features:
+                    <ul>
+                        <li>Whenever a player gets a kill, there name is displayed for 5 seconds (how long players get strength for in Hypixel Skywars)</li>
+                        <li>Using commands, you can configure:
+                            <ul>
+                                <li>The position of the text</li>
+                                <li>The color of the text (including a chroma option, as shwon above)</li>
+                                <li>The speed of the chroma cycling</li>
+                            </ul>
+                        </li>
+                        <li>Click <a href="Sky Wars Kill Alert-1.0.jar" download>here</a> to download
+
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </body>
 </html>

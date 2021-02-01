@@ -5,95 +5,99 @@
         <meta name="viewport" content="width=device-width, initial scale=1"> <!--makes the width of the site the same as the device's, initial scale sets default zoom to 1-->
         <title>Jack Blake</title>
         <style>
-            .wrapper{
-                position: relative;
-                color: white;
-            }
-            .wrapper a{
+            a{
                 text-decoration: none;
                 color: white;
+                font-family: 'Courier New', Courier, monospace;
             }
-            .wrapper a:hover{
+            a:hover{
                 color:orange;
             }
             .topLeft {
                 position: absolute;
-                left: 10px;
-                top: 5px;
+                left: 1vw;
+                top: 0.5vw;
             }
             .topMid{
                 position: absolute;
-                left: 50%;
-                top: 5px;
+                left: 45vw;
+                top: 0.5vw;
             }
             .topRight {
                 position: absolute;
-                right: 10px;
-                top: 5px;
+                right: 1vw;
+                top: 0.5vw;
             }
             @keyframes biggySmall0{
                 from{
-                    font-size: 15px;
+                    font-size: 3vw;
                 } to {
-                    font-size: 17.25px; 
+                    font-size: 3.3vw; 
                 }
             }
             @keyframes biggySmall1{
                 from{
-                    font-size: 40px;
+                    font-size: 6vw;
                 } to {
-                    font-size: 45px; 
+                    font-size: 6.6vw; 
                 }
             }
             @keyframes biggySmall2{
                 from{
-                    font-size: 20px;
+                    font-size: 4vw;
                 } to {
-                    font-size: 22.5px; 
+                    font-size: 4.4vw; 
                 }
             }
             .midMid0{
                 position: absolute;
-                top: 239px;
-                left: 44%;
+                top: 30vw;
+                left: 47vw;
                 color: white;
-                font-size: 15px;
+                font-size: 3vw;
                 animation-name: biggySmall0;
                 animation-duration:2s;
                 animation-direction:alternate;
                 animation-iteration-count: infinite;
                 animation-timing-function: ease-in-out;
+                width:fit-content;
             }
             .midMid1{
                 position: absolute;
-                top: 250px;
-                left: 44%;
+                top: 32vw;
+                left: 44vw;
                 color: white;
-                font-size: 40px;
+                font-size: 6vw;
                 animation-name: biggySmall1;
                 animation-duration:3s;
                 animation-direction:alternate;
                 animation-iteration-count: infinite;
                 animation-timing-function: ease-in-out;
+                width:fit-content;
             }  
             .midMid2{
                 position: absolute;
-                top: 292px;
-                left: 44%;
+                top: 38vw;
+                left: 30vw;
                 color: white;
-                font-size: 20px; 
+                font-size: 4vw; 
                 animation-name: biggySmall2;
                 animation-direction:alternate;
                 animation-iteration-count: infinite;
                 animation-timing-function: ease-in-out;
                 animation-delay: -1.5s;
                 animation-duration:4s;
+                width:fit-content;
+            }
+            body{
+                background-image: url('sunset.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
             }
         </style>
     </head>
     <body> 
-        <div class="wrapper">
-            <img src="sunset.jpg">
             <div class="midMid0">
                 Hi, I'm
             </div>
@@ -107,11 +111,10 @@
                 <a href="projects.html">Projects</a>
             </div>
             <div class="topMid">
-                <a href="about.html">About</a>
+                <a href="#">About</a>
             </div>    
             <div class="topRight">
-                <a href="contact.html">Contact</a>
+                <a href="#">Contact</a>
             </div>
-        </div>
     </body>
 </html>
