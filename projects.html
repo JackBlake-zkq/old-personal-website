@@ -5,6 +5,13 @@
         <meta name="viewport" content="width=device-width, initial scale=1"> 
         <title>Jack Blake - Projects</title>
         <style>
+            @keyframes rise{
+                from{
+                    margin-top:120vh;
+                } to {
+                    margin-top:3vh
+                }
+            }
             .wrapper{
                 position: absolute;
                 margin-top: 3vh;
@@ -12,6 +19,9 @@
                 left: 12.5vw;
                 background-color: rgba(54, 54, 54, 0.55);
                 color: white;
+                animation-name: rise;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
             }
             .wrapper h1 {
                 text-align: center;
@@ -57,7 +67,6 @@
             body{
                 background-image: url('bg.gif');
                 background-attachment: fixed;
-                font-family: 'Courier New', Courier, monospace;
             }
         </style>
     </head>
@@ -80,7 +89,7 @@
                     <b>Technologies:</b>
                     <ul>
                         <li>
-                            I want to countinue learning in 2021
+                            I want to countinue learning in 2021:
                             <ul>
                                 <li>
                                     Java, HTML / CSS
@@ -88,7 +97,7 @@
                             </ul>
                         </li>
                         <li>
-                            I want to start learning in 2021
+                            I want to start learning in 2021:
                             <ul>
                                 <li>
                                     JavaScript, React.js
@@ -96,7 +105,7 @@
                             </ul>
                         </li>
                         <li>
-                            I'm already experienced in
+                            I'm already experienced in:
                             <ul>
                                 <li>
                                     None
@@ -122,7 +131,7 @@
                         <li>Using commands, you can configure:
                             <ul>
                                 <li>The position of the text</li>
-                                <li>The color of the text (including a chroma option, as shwon above)</li>
+                                <li>The color of the text (including a chroma option, as shown above)</li>
                                 <li>The speed of the chroma cycling</li>
                             </ul>
                         </li>
