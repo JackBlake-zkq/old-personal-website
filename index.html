@@ -20,8 +20,22 @@
                 from{margin-left:35%;}
                 to{margin-left:38%}
             }
+            @media (max-width: 640px){
+                @keyframes wave{
+                from{margin-left:15%;}
+                to{margin-left:22%}
+                }
+                #title{
+                    font-size: 1.25em;
+                }
+            }
+            @media (min-width: 1080px){
+                #title{
+                    font-size:2.5em;
+                }
+            }
+
             #title1{
-                margin-left:35%;
                 animation-name: wave;
                 animation-duration:6s;
                 animation-direction: alternate;
@@ -30,7 +44,6 @@
             }
             #title2{
                 font-size:2em;
-                margin-left:35%;
                 animation-name: wave;
                 animation-duration:6s;
                 animation-direction: alternate;
@@ -39,7 +52,6 @@
                 animation-delay:-2s;
             }
             #title3{
-                margin-left:35%;
                 animation-name: wave;
                 animation-duration:6s;
                 animation-direction: alternate;
@@ -49,7 +61,6 @@
                 font-size: 0.75em;
             }
             #title4{
-                margin-left:35%;
                 animation-name: wave;
                 animation-duration:6s;
                 animation-direction: alternate;
