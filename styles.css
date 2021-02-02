@@ -1,0 +1,29 @@
+body{
+    font-size: 16px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+.flex-container{
+    display: flex;
+}
+.nav-element{
+    width:33.333333333333333333333333333333333%;
+
+}
+.nav-element a{
+    text-decoration: none;
+    color: white;
+}
+.nav-element a:hover{
+    color:orange;
+}
+#tl{
+    padding-left: 1%;
+}
+#tm{
+    text-align: center;
+}
+#tr{
+    text-align: right;
+    padding-right: 1%;
+}

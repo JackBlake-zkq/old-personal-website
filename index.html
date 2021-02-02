@@ -4,117 +4,69 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial scale=1"> <!--makes the width of the site the same as the device's, initial scale sets default zoom to 1-->
         <title>Jack Blake</title>
+        <link rel="stylesheet" href="styles.css">
         <style>
-            a{
-                text-decoration: none;
-                color: white;
-            }
-            a:hover{
-                color:orange;
-            }
-            .topLeft {
-                position: absolute;
-                left: 1vw;
-                top: 0.5vw;
-            }
-            .topMid{
-                position: absolute;
-                left: 45vw;
-                top: 0.5vw;
-            }
-            .topRight {
-                position: absolute;
-                right: 1vw;
-                top: 0.5vw;
-            }
-            @keyframes biggySmall0{
-                from{
-                    font-size: 3vw;
-                } to {
-                    font-size: 3.3vw; 
-                }
-            }
-            @keyframes biggySmall1{
-                from{
-                    font-size: 6vw;
-                } to {
-                    font-size: 6.6vw; 
-                }
-            }
-            @keyframes biggySmall2{
-                from{
-                    font-size: 4vw;
-                } to {
-                    font-size: 4.4vw; 
-                }
-            }
-            .midMid0{
-                position: absolute;
-                top: 30vw;
-                left: 47vw;
-                color: white;
-                font-size: 3vw;
-                animation-name: biggySmall0;
-                animation-duration:2s;
-                animation-direction:alternate;
-                animation-iteration-count: infinite;
-                animation-timing-function: ease-in-out;
-                width:fit-content;
-            }
-            .midMid1{
-                position: absolute;
-                top: 32vw;
-                left: 44vw;
-                color: white;
-                font-size: 6vw;
-                animation-name: biggySmall1;
-                animation-duration:3s;
-                animation-direction:alternate;
-                animation-iteration-count: infinite;
-                animation-timing-function: ease-in-out;
-                width:fit-content;
-            }  
-            .midMid2{
-                position: absolute;
-                top: 38vw;
-                left: 30vw;
-                color: white;
-                font-size: 4vw; 
-                animation-name: biggySmall2;
-                animation-direction:alternate;
-                animation-iteration-count: infinite;
-                animation-timing-function: ease-in-out;
-                animation-delay: -1.5s;
-                animation-duration:4s;
-                width:fit-content;
-            }
             body{
                 background-image: url('sunset.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-attachment: fixed;
-                text-shadow: 0.2vw 0.2vw black;
+            }
+            #title{
+                position: absolute;
+                width:75%;
+                margin-left: 12.5%;
+                margin-right: 12.5%;
+                top: 37.5%;
+                font-size: 1.5em;
+                color:white;
+            }
+            @keyframes wave{
+                from{margin-left:20%;}
+                to{margin-left:23%}
+            }
+            #title1{
+                margin-left:20%;
+                animation-name: wave;
+                animation-duration:4s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            }
+            #title2{
+                font-size:2em;
+                margin-left:20%;
+                animation-name: wave;
+                animation-duration:4s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                animation-delay:-2s;
+            }
+            #title3{
+                margin-left:20%;
+                animation-name: wave;
+                animation-duration:4s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                animation-delay:-4s;
             }
         </style>
     </head>
-    <body> 
-            <div class="midMid0">
-                Hi, I'm
+    <body>
+        <div class="flex-container">
+            <div class="nav-element" id="tl">
+                <a href="#">Projects</a>
             </div>
-            <div class="midMid1">
-                <b>Jack Blake</b>
-            </div>
-            <div class="midMid2">
-                HS Senior and beginner developer
-            </div>
-            <div class="topLeft">
-                <a href="projects.html">Projects</a>
-            </div>
-            <div class="topMid">
+            <div class="nav-element" id="tm">
                 <a href="#">About</a>
-            </div>    
-            <div class="topRight">
-                <a href="contact.html">Contact</a>
             </div>
-    </body>
-</html>
+            <div class="nav-element" id="tr">
+                <a href="">Contact</a>
+            </div>
+        </div>
+        <div id="title">
+                    <div id="title1">Hi, I'm</div>
+                    <div id="title2">Jack Blake</div>
+                    <div id="title3">HS Senior and Beginnner developer</div>
+        </div>
+    </body> 
+</html>   
