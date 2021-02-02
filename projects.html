@@ -7,9 +7,11 @@
         <style>
             @keyframes rise{
                 from{
-                    margin-top:120vh;
+                    opacity: 0%;
+                    margin-top:60vh;
                 } to {
-                    margin-top:3vh
+                    margin-top:40vh
+                    opacity: 100%;
                 }
             }
             .wrapper{
@@ -17,11 +19,9 @@
                 margin-top: 3vh;
                 width: 75vw;
                 left: 12.5vw;
-                background-color: rgba(54, 54, 54, 0.55);
+                background-image: linear-gradient(45deg,rgba(54,54,54,0.6), rgba(54,54,54,0.3));
                 color: white;
-                animation-name: rise;
-                animation-duration: 1s;
-                animation-timing-function: ease-in-out;
+                height: 250vh;
             }
             .wrapper h1 {
                 text-align: center;
@@ -67,7 +67,136 @@
             body{
                 background-image: url('bg.gif');
                 background-attachment: fixed;
+                text-shadow: 0.2vw 0.2vw black;
             }
+            .head{
+                margin-top: 40vh;
+                animation-name: rise;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                text-shadow: 0.2vw 0.2vw black;
+            }
+            .tech{
+                position: absolute;
+                width:75vw;
+                top: 105vh;
+                left: 6.25vw;
+            }
+            .tech table{
+                border-spacing: 4vw;
+                font-size: 2vw;
+            }
+            .tech img{
+                width: 4vw;
+                height: 4vw;
+            }
+            @keyframes swap{
+                0%{left:2vw; opacity: 100%}
+                50%{left:-2.5vw; opacity: 20%}
+                100%{left:-7vw; opacity: 100%}
+            }
+            @keyframes swap2{
+                0%{left:22vw; opacity: 100%}
+                50%{left:17.5vw; opacity: 20%}
+                100%{left:13vw; opacity: 100%}
+            }
+            #img1{
+                position: absolute;
+                left: 36vw;
+            }
+            #img2{
+                position: absolute;
+                left: -7vw;
+                animation-name: swap;
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-delay: -2s;
+                animation-timing-function:linear;
+            }
+            #img3{
+                position: absolute;
+                left: 2vw;
+                animation-name: swap;
+                animation-direction: alternate;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-delay: 0s;
+                animation-timing-function: linear;
+            }
+            #img4{
+                position: absolute;
+                left: 22vw;
+                animation-name: swap2;
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-delay: -2s;
+                animation-timing-function:linear;
+            }
+            #img5{
+                position: absolute;
+                left: 13vw;
+                animation-name: swap2;
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-delay: 0s;
+                animation-timing-function:linear;
+            }
+            #img6{
+                position: absolute;
+                left: 48vw;
+                width: 12vw;
+                height: 12vw;
+                margin-top: -4vw;
+            }
+            #arrow{
+                position: absolute;
+                left: 41vw;
+                width: 6vw;
+                height: 2vw;
+                margin-top: 1vw;
+            }
+            .portfolio{
+                position: absolute;
+                text-align: center;
+                width:75vw;
+                top: 175vh;
+                margin-left:6.25;
+                font-size: 4vw;
+            }
+            .swka{
+                margin-top:5vh;
+                position: absolute;
+                background-image: url('Ex.gif');
+                background-size: cover;
+                width: 35vw;
+                left: 19vw;
+                height: 15vw;
+                font-size:2vw;
+                text-align: center;
+
+            }
+            .swkaOverlay{
+                opacity: 0%;
+                background-color: rgba(54,54,54,0.6);
+                height: 15vw;
+            }
+            .swkaOverlay img{
+                position: absolute;
+                width: 5vw;
+                height: 4vw;
+                left: 15vw;
+            }
+            .swka:hover .swkaOverlay{
+                opacity: 100%;
+            }
+            .techtitle{
+                margin-left: 15vw;
+                font-size: 4vw;
+            }
+
         </style>
     </head>
     <body> 
@@ -82,69 +211,42 @@
         </div>
         
         <div class="wrapper">
-            <h1>Projects</h1>
-            <hr>
-            <ul>
-                <li>
-                    <b>Technologies:</b>
-                    <ul>
-                        <li>
-                            I want to countinue learning in 2021:
-                            <ul>
-                                <li>
-                                    Java, HTML / CSS
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            I want to start learning in 2021:
-                            <ul>
-                                <li>
-                                    JavaScript, React.js
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            I'm already experienced in:
-                            <ul>
-                                <li>
-                                    None
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <b>Finished Projects:</b>
-                </li>
-            </ul>
-            <hr>
-            <h2>
-                Hypixel Skywars Kill Alert Mod
-            </h2>
-            <img src="Ex.gif">
-            <ul>
-                <li>
-                    Features:
-                    <ul>
-                        <li>Whenever a player gets a kill, there name is displayed for 5 seconds (how long players get strength for in Hypixel Skywars)</li>
-                        <li>Using commands, you can configure:
-                            <ul>
-                                <li>The position of the text</li>
-                                <li>The color of the text (including a chroma option, as shown above)</li>
-                                <li>The speed of the chroma cycling
-                                    <ul>
-                                        <li>A file is created in your config folder and you settings are saved to it</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Click <a href="Sky Wars Kill Alert-1.0.jar" download>here</a> to download
-
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="head">
+                <h1>Projects ↓</h1>
+            </div>
+            <div class="tech">
+                 <div class="techtitle">
+                    <b></b>2021 Technologies</b>
+                 </div>
+                <table>
+                    <tr>
+                        <th>Continue Learning:</th>
+                        <th>Start Learning:</th>
+                        <th>Finished Projects:</th>
+                    </tr>
+                </table>
+                <img src="java.png" id="img1">
+                <img src="html.png" id="img2">
+                <img src="css.png" id="img3">
+                <img src="js.png" id="img4">
+                <img src="react.png" id="img5">
+            </div>
+            <div class="portfolio">
+                <b>Portfolio:</b>
+                <div class="swka">
+                    <div class="swkaOverlay">
+                        <br>
+                        Sky Wars Kill Alert Mod
+                        <br>
+                        <br>
+                        <a href="https://github.com/JackBlake-zkq/SkyWarsKillAlert" target="_blank">Github</a>
+                        <br>
+                        <br>
+                        <a href="Sky Wars Kill Alert-1.0.jar" download>Download</a>
+                        <img src="forge.svg">
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
