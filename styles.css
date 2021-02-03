@@ -5,6 +5,9 @@ body{
     font-family:'Courier New';
     background-image: linear-gradient(to right, #434343, #000000)
 }
+::-webkit-scrollbar {
+    display: none;
+}
 .flex-container{
     display: flex;
 }
