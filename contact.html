@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial scale=1"> <!--makes the width of the site the same as the device's, initial scale sets default zoom to 1-->
+        <title>Jack Blake - Contact</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            
+            #contact{
+                margin-top: 30vh;
+                margin-left: auto;
+                margin-right: auto;
+                width:50%;
+                text-align: center;
+                font-size: 3vw;
+                animation: rise 1.5s ease-in-out 1;
+                border-color: white;
+                border-width: 1vw;
+                border-style: solid;
+                border-radius: 2vw;
+                box-shadow: 1vw 1vw black;
+            }
+            @media(max-width: 720px){
+                #contact{
+                    width:90%;
+                    font-size: 5.5vw;
+                }
+            }
+            @media(min-width: 1240px){
+                #contact{
+                    width:30%;
+                    font-size: 1.7vw;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="nav-element" id="tl">
+                <a href="projects.html">Projects</a>
+            </div>
+            <div class="nav-element" id="tm">
+                <a href="#">About</a>
+            </div>
+            <div class="nav-element" id="tr">
+                <a href="index.html">Main</a>
+            </div>
+        </div>
+
+        <div id="contact">
+            <h1>Contact Me</h1>
+            📱(717) 456-0513
+            <div class="buffer"></div>
+        </div>
+
+    </body> 
+</html>   

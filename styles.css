@@ -2,28 +2,14 @@ body{
     font-size: 16px;
     color: white;
     text-shadow: 0.1em 0.1em black;
-    font-family:'Courier New', Courier, monospace;
-    background-image: linear-gradient(-45deg, #914731, #411224, #11485c, #115e4c);
-	background-size: 400% 400%;
-	animation: grad 10s ease infinite;
-}
-@keyframes grad {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    font-family:'Courier New';
+    background-image: linear-gradient(to right, #434343, #000000)
 }
 .flex-container{
     display: flex;
 }
 .nav-element{
     width:33.333333333333333333333333333333333%;
-
 }
 .nav-element a{
     text-decoration: none;
@@ -47,9 +33,7 @@ body{
     background-color:rgba(100,100,100,0.1);
     margin-top: 10vw;
     margin-bottom: 10vw;
-    animation-name: rise;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
+    animation: rise 2s ease-in-out 1;
     margin-left:auto;
     margin-right:auto;
     text-align: center;
@@ -83,6 +67,9 @@ body{
 }
 @media (max-width: 720px){
     .mainElement h1{
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
+}
+.buffer{
+    height:2vw;
 }
