@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial scale=1"> <!--makes the width of the site the same as the device's, initial scale sets default zoom to 1-->
+        <title>Jack Blake - Contact</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .leftBox{
+                width: 60vw;
+                background-color:rgba(100,100,100,0.1);
+                margin-top: 10vw;
+                margin-bottom: 10vw;
+                margin-left:-2vw;
+                border-bottom-right-radius: 2vw;
+                border-top-right-radius: 2vw;
+                animation:slideFromLeft 2s ease-out 1;
+                box-shadow: 0vw 2vw black;
+                padding-left:1vw;
+            }
+            .rightBox{
+                width: 60vw;
+                background-color:rgba(100,100,100,0.1);
+                margin-top: 10vw;
+                margin-bottom: 10vw;
+                margin-left:44vw;
+                border-bottom-left-radius: 2vw;
+                border-top-left-radius: 2vw;
+                animation:slideFromRight 2s ease-out 1;
+                box-shadow: 0vw 2vw black;
+            }
+            @keyframes slideFromLeft{
+                from{margin-left:-62vw}
+                to{margin-left:-2vw}
+            }
+            @keyframes slideFromRight{
+                from{margin-left:104vw}
+                to{margin-left:44vw}
+            }
+            #first{
+                text-align: center;
+                animation-delay: -1.5s;
+            }
+            #second{
+                animation-delay: -1s;
+            }
+            #third{
+                animation-delay: -0.5s;
+            }
+            #fourth{
+
+            }
+            .innerTextLeft{
+                font-size: 1em;
+                width: 75%;
+                margin-left: 5%;
+                margin-right: 20%;
+            }
+            .innerTextLeft p{
+                word-break: break-all;
+            }
+            .innerTextRight{
+                font-size: 1em;
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .innerTextRight p{
+                word-break: break-all;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="nav-element" id="tl">
+                <a href="projects.html">Projects</a>
+            </div>
+            <div class="nav-element" id="tm">
+                <a href="index.html">Main</a>
+            </div>
+            <div class="nav-element" id="tr">
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="leftBox" id="first">
+            <h1>About Me</h1>
+        </div>
+        <div class="rightBox" id="second">
+            <div class="innerTextLeft">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+        </div>
+        <div class="leftBox" id="third">
+            <div class="innerTextRight">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+        </div>
+        <div class="rightBox" id="fourth">
+            <div class="innerTextLeft">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+        </div>
+
+    </body> 
+</html>   
