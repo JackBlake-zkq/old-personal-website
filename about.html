@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial scale=1"> <!--makes the width of the site the same as the device's, initial scale sets default zoom to 1-->
-        <title>Jack Blake - Contact</title>
+        <title>Jack Blake - About</title>
         <link rel="stylesheet" href="styles.css">
         <style>
             .leftBox{
@@ -49,22 +49,30 @@
 
             }
             .innerTextLeft{
-                font-size: 1em;
                 width: 80%;
                 margin-left: 15%;
                 margin-right: 5%;
             }
             .innerTextLeft p{
                 word-break: keep-all;
+                font-size: 1em;
             }
             .innerTextRight{
-                font-size: 1em;
                 width: 80%;
                 margin-left: 5%;
                 margin-right: 15%;
             }
             .innerTextRight p{
                 overflow-wrap:keep-all;
+                font-size: 1em;
+            }
+            @media (min-width: 960px){
+                .innerTextRight{
+                    font-size: 1.75em;
+                }
+                .innerTextLeft{
+                    font-size: 1.75em;
+                }
             }
         </style>
     </head>
@@ -80,27 +88,31 @@
                 <a href="contact.html">Contact</a>
             </div>
         </div>
+        <div class="fullWidthBar">
+            <div class="leftBox" id="first">
+                <div class="innerTextLeft">
+                    <h1>About Me</h1>
+                </div>
+            </div>
+        </div>
 
-        <div class="leftBox" id="first">
-            <div class="innerTextLeft">
-                <h1>About Me</h1>
+            <div class="rightBox" id="second">
+                <div class="innerTextRight">
+                    <p>I'm a soon to be graduate high school student who recently got into programming. I plan to study computer science in college and pursue some kind of multi-field entreprenuerial venture.</p>
+                </div>
             </div>
-        </div>
-        <div class="rightBox" id="second">
-            <div class="innerTextRight">
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+        
+            <div class="leftBox" id="third">
+                <div class="innerTextLeft">
+                    <p>These days, my time is spent learning programming fundamentals in my Java based APCS course and practicing CSS on cssbattle</p>
+                </div>
             </div>
-        </div>
-        <div class="leftBox" id="third">
-            <div class="innerTextLeft">
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "</p>
+        
+            <div class="rightBox" id="fourth">
+                <div class="innerTextRight">
+                    <p>In my free time, you can usually find me on the golf course, playing tactical board games / TCGs such as 7 Wonders and Magic: The Gathering, or critizing plot-holes in Netflix shows.</p>
+                </div>
             </div>
-        </div>
-        <div class="rightBox" id="fourth">
-            <div class="innerTextRight">
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "</p>
-            </div>
-        </div>
 
     </body> 
 </html>   
