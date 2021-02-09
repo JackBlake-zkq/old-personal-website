@@ -35,9 +35,21 @@
                 font-size:20px;
                 border-radius: 5px;
             }
+            .comp textarea{
+                width:50%;
+                max-width:500px;
+                background: rgba(0,0,0,0.2);
+                border:none;
+                color:white;
+                font-size:20px;
+                border-radius: 5px;
+            }
             @media(max-width: 640px){
                 .comp input{
                 width:90%;
+                }
+                .comp textarea{
+                    width:90%;
                 }
             }
             .sendButton{
@@ -50,6 +62,17 @@
             }
             .sendButton:hover{
                 background:rgba(30, 255, 0, 0.2);
+            }
+            .typeform-widget{
+                width: 60%; 
+                height: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @media(max-width:1080px){
+                .typeform-widget{
+                    width:100%;
+                }
             }
 
         </style>
@@ -68,25 +91,10 @@
         </div>
 
         <div class="wrap">
-            <h1>Under Construction</h1>
-            <div class="comp">
-                <input type="text" name="" value="" placeholder="Name">
-            </div>
-            <div class="comp">
-                <input type="text" name="" value="" placeholder="Email">
-            </div>
-            <div class="comp">
-                <input id="msg" type="text" name="" value="" placeholder="Message">
-            </div>
-            <div class="comp">
-                <button class="sendButton">➥</button>
-            </div>
-        </div>
-        <div class="wrap">
-            <div class="comp">
-                <h2>Call or Text Me:</h2>
-                <p>📱(717) 456-0513</p>
-            </div>
+            <h1>Contact Me</h1>
+
+            <div class="typeform-widget" data-url="https://form.typeform.com/to/P9ynLS6v?typeform-medium=embed-snippet" data-transparency="100" data-hide-headers="true" data-hide-footer="true"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+
         </div>
             
         
