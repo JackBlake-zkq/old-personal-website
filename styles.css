@@ -33,19 +33,14 @@ body{
 }
 .mainElement{
     width: 53vw;
-    background-color:rgba(100,100,100,0.1);
-    margin-top: 10vw;
+    margin-top: 75px;
     margin-bottom: 10vw;
     animation: rise 2s ease-in-out 1;
     margin-left:auto;
     margin-right:auto;
     text-align: center;
-    font-size: 1em;
-    border-radius: 2vw;
-    box-shadow: 2vw 2vw black;
-}
-.mainElement:hover{
-    background-color:rgba(150,150,150,0.1);
+    font-size: 1.4em;
+    background-color:rgba(255,255,255,0.005);
 }
 .mainElement h1{
     font-size:1.5em;
@@ -57,15 +52,16 @@ body{
 @keyframes rise{
     from{
         opacity: 0%;
-        margin-top:100vw;
+        margin-top:100vh;
     } to {
-        margin-top:1vw
+        margin-top:75px;
         opacity: 100%;
     }
 }
 @media (max-width: 1280px){
     .mainElement{
         width:80vw;
+        font-size:1em;
     }
 }
 @media (max-width: 720px){
