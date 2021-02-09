@@ -2,35 +2,55 @@
 <html>
     <head>
         <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, initial scale=1"> <!--makes the width of the site the same as the device's, initial scale sets default zoom to 1-->
+        <meta name="viewport" content="width=device-width, initial scale=1">
         <title>Jack Blake - Contact</title>
         <link rel="stylesheet" href="styles.css">
         <style>
             
-            #contact{
-                margin-top: 30vh;
+            .wrap{
+                margin-top: 75px;
+                text-align: center;
+            }
+            .wrap h1{
+                font-size: 40px;
+            }
+            .wrap h2{
+                font-size:30px;
+            }
+            .comp{
+                width:90vw;
                 margin-left: auto;
                 margin-right: auto;
-                width:50%;
+                display:block;
                 text-align: center;
-                font-size: 3vw;
-                animation: rise 1.5s ease-in-out 1;
-                border-radius: 2vw;
-                box-shadow: 1vw 1vw black;
-                background-color: rgba(200,200,200,0.1);
+                margin-top:10px;
             }
-            @media(max-width: 720px){
-                #contact{
-                    width:90%;
-                    font-size: 5.5vw;
+            .comp input{
+                width:50%;
+                max-width:500px;
+                background: rgba(0,0,0,0.2);
+                border:none;
+                color:white;
+                font-size:20px;
+                border-radius: 5px;
+            }
+            @media(max-width: 640px){
+                .comp input{
+                width:90%;
                 }
             }
-            @media(min-width: 1240px){
-                #contact{
-                    width:30%;
-                    font-size: 1.7vw;
-                }
+            .sendButton{
+                background: rgba(50,50,50,0.7);
+                color: white;
+                font-size: 30px;
+                border: none;
+                width:75px;
+                border-radius: 5px;
             }
+            .sendButton:hover{
+                background:rgba(30, 255, 0, 0.2);
+            }
+
         </style>
     </head>
     <body>
@@ -46,11 +66,32 @@
             </div>
         </div>
 
-        <div id="contact">
-            <h1>Contact Me</h1>
-            📱(717) 456-0513
-            <div class="buffer"></div>
+        <div class="wrap">
+            <h1>Under Construction</h1>
+            <div class="comp">
+                <input type="text" name="" value="" placeholder="Name">
+            </div>
+            <div class="comp">
+                <input type="text" name="" value="" placeholder="Email">
+            </div>
+            <div class="comp">
+                <input id="msg" type="text" name="" value="" placeholder="Message">
+            </div>
+            <div class="comp">
+                <button class="sendButton">➥</button>
+            </div>
+
+
+            <div class="comp">
+                <h2>Call or Text Me:</h2>
+                <p>📱(717) 456-0513</p>
+            </div>
         </div>
+
+        
+        
+        
+
 
     </body> 
 </html>   
