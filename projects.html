@@ -6,100 +6,75 @@
         <title>Jack Blake - Projects</title>
         <link rel="stylesheet" href="styles.css">
         <style>
-            #title{
-                width: 50vw;
-                height: 10vw;
-                margin-left: auto;
-                margin-right: auto;
-                font-size: 6vw;
+            .langs{
+                height:1080px;
+                width:110%;
+                margin-left:-5%;
+                overflow:hidden;
             }
-            .swka{
-                background-image: url('Ex.gif');
-                background-size: cover;
-                width: 50vw;
-                height: 30vw;
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
-                border-radius: 1vw;
-            }
-            .swkaOverlay{
-                opacity: 0%;
-                background-color: rgba(79, 79, 79, 0.6);
-                padding-top: 10vw;
+            .langs img{
+                width:20vw;
                 height:20vw;
-                border-radius: 1vw;
+                position:absolute;
+                top:-20vw;
+                z-index: -1;
             }
-            .swkaOverlay a{
-                text-decoration: none;
-                color: cornflowerblue;
-                font-size: 1.25em;
+            .img1{
+                left:0vw;
+                animation:falling 5s linear infinite 0s;
             }
-            .swkaOverlay h2{
-                font-size: 1.5em;
+            .img2{
+                left:20vw;
+                animation:falling 5s linear infinite 1s;
             }
-            .swkaOverlay a:hover{
-                color:orange;
-
+            .img3{
+                left:40vw;
+                animation:falling 5s linear infinite 2s;
             }
-            .swka:hover .swkaOverlay{
-                opacity: 100%;
+            .img4{
+                left:60vw;
+                animation:falling 5s linear infinite 3s;
             }
-            @media (max-width: 960px){
-                .swkaOverlay a{
-                font-size: 0.75em;
-                }
-                .swkaOverlay h2{
-                font-size: 1em;
-                }
+            .img5{
+                left:80vw;
+                animation:falling 5s linear infinite 4s;
             }
-            @media (max-width: 640px){
-                .swkaOverlay a{
-                font-size: 0.7em;
-                }
-                .swkaOverlay h2{
-                font-size: 0.85em;
-                }
+            @keyframes falling{
+                from{top:-20vw;}
+                to{top:1080px; transform:rotate(180deg)}
+            }
+            .proj{
+                background:black;
+                height:1080px;
+                width:110%;
+                margin-left:-5%;
             }
         </style>
     </head>
     <body>
-        <div class="flex-container">
-            <div class="nav-element" id="tl">
+        <div class="flexContainer">
+            <div class="navElement" id="tl">
                 <a href="index.html">Main</a>
             </div>
-            <div class="nav-element" id="tm">
+            <div class="navElement" id="tm">
                 <a href="about.html">About</a>
             </div>
-            <div class="nav-element" id="tr">
+            <div class="navElement" id="tr">
                 <a href="contact.html">Contact</a>
             </div>
         </div>
-        <div class="mainElement" id="title">
-            <h1>Projects</h1>
+        
+        <div class="langs">
+            <img class="img1" src="java.png">
+            <img class="img2" src="html.png">
+            <img class="img3" src="css.png">
+            <img class="img4" src="js.png">
+            <img class="img5" src="react.png">
         </div>
-        <div class="mainElement">
-            <h1>Technologies I'll continue learning in 2021</h1>
-            <img src="java.png">
-            <img src="html.png">
-            <img src="css.png">
-        </div>
-        <div class="mainElement">
-            <h1>Technologies I'll start learning in 2021</h1>
-            <img src="js.png">
-            <img src="react.png">
-        </div>
-        <div class="mainElement">
-            <h1>Finished Projects</h1>
 
-            <div class="swka">
-                <div class="swkaOverlay">
-                    <h2>Sky Wars Kill Alert Mod</h2>
-                    <a href="https://github.com/JackBlake-zkq/SkyWarsKillAlert" target="_blank">Github</a>
-                    <a href="Sky Wars Kill Alert-1.0.jar" download>Download</a>
-                </div>
-            </div>
-            <div class="buffer"></div>
+        <div class="proj">
+            
         </div>
+
     </body> 
 </html>   
