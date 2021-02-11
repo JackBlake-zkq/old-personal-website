@@ -3,10 +3,8 @@ body{
     color: white;
     text-shadow: 0.1em 0.1em black;
     font-family:Courier;
-    background-image: linear-gradient(to right, #ff9966, #ff5e62)
-}
-::-webkit-scrollbar {
-    display: none;
+    background-image: linear-gradient(to right, #ff9966, #ff5e62);
+    overflow-x:hidden;
 }
 .flexContainer{
     display: flex;
@@ -40,8 +38,4 @@ body{
         margin-top:75px;
         opacity: 100%;
     }
-}
-.buffer{
-    width:100%;
-    height:10px;
 }
