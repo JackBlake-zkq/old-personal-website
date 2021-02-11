@@ -4,7 +4,6 @@ body{
     text-shadow: 0.1em 0.1em black;
     font-family:Courier;
     background-image: linear-gradient(to right, #ff9966, #ff5e62);
-    overflow-x:hidden;
 }
 .flexContainer{
     display: flex;
