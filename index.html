@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jack Blake</title>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            :root{
+                --main-bg: #white;
+                --secondary-bg:rgb(245, 245, 245);
+                --content-bg:#FFF852;
+                --header-text:black;
+                --content-text:rgb(100, 100, 100);
+            }
+            html{
+                font-size: 1rem;
+                font-family: 'Heebo', sans-serif;
+    
+            }
+            body{
+                margin:0;
+                background:var(--main-bg);
+            }
+            #nav{
+                padding:1rem;
+                font-size: 2rem;
+                background:none;
+                border:none;
+                color:var(--header-text);
+                position: fixed;
+                z-index:1;
+                transition:transform 400ms ease-in-out, font-size 300ms ease-in-out;
+            }
+            #nav:hover{
+                font-size: 2.2rem;
+            }
+            #navBar a:hover{
+                font-size: 1.4rem;
+            }
+            #navBar{
+                position:fixed;
+                background:var(--content-bg);
+                padding-left: 1rem;
+                padding-right: 5rem;
+                border-bottom-right-radius: 100%;
+                left:-100%;
+                transition:left 400ms ease-in-out;
+            }
+            #navBar a{
+                font-size: 1.2rem;
+                color:var(--content-text);
+                display: block;
+                text-decoration: none;
+                margin-bottom:0.5rem;
+                transition: font-size 300ms ease-in-out;
+            }
+            #navBar a:first-child{
+                margin-top: 4.5rem;
+            }
+            #navBar a:last-child{
+                margin-bottom:2rem;
+            }
+            footer{
+                justify-content:center;
+                bottom:0;
+                width:100%;
+                display:flex;
+                background:var(--content-bg);
+                width:100%;
+                position:fixed;
+            }
+            footer button{
+                background-color:var(--header-text);
+                border:none;
+                border-radius:100%;
+                width:3.4rem;
+                height:3.4rem;
+                margin:1rem;
+                transition:width 400ms ease-in-out, height 400ms ease-in-out, margin 400ms ease-in-out;
+            }
+            footer button:hover{
+                width:3.6rem;
+                height:3.6rem;
+                margin:0.8rem
+            }
+            footer button{
+                background-size: 50%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            footer button:first-child{
+                background-image: url('linkedin.svg');
+            }
+            footer button:last-child{
+                background-image: url('gmail.svg');
+            }
+            #home{
+                display: flex;
+                justify-content: center;
+            }
+            #home h1{
+                margin-top:20rem;
+                text-align: center;
+                margin-bottom: 20rem;
+            }
+            #home div{
+                margin-top:20.3rem;
+                height:2rem;
+                width:0.1rem;
+                background:var(--header-text);
+                margin-left:0.1rem;
+            }
+            #about{
+                background:var(--secondary-bg);
+                display: flex;
+                justify-content: center;
+                padding:4rem;
+                padding-top:8rem;
+                padding-bottom: 8rem;
+            }
+            #about p{
+                font-size: 1.3rem;
+            }
+            #about img{
+                width: 161px;
+                height: 197px;
+                margin-left:3rem;
+                border-radius: 1rem;
+            }
+            @media (max-width:720px){
+                #about img{
+                    display: none;
+                }
+            }
+            #projects{
+                text-align: center;
+            }
+            #projInner{
+                margin:4rem;
+                text-align: center;
+                margin-top:1rem;
+                margin-bottom: 8.4rem;
+                margin-top: 3rem;
+            }
+            #projInner h1{
+                color:var(--header-text);
+            }
+            .proj{
+                width:80%;
+                border: none;
+                background:var(--secondary-bg);
+                margin-bottom: 0.5rem;
+            }
+            .proj:hover{
+                opacity:80%;
+            }
+            .proj h1{
+                color:var(--header-text);
+                font-size: 1.5rem;
+            }
+            .proj p{
+                color:var(--content-text);
+                font-size: 1.2rem;
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200&family=Poppins:wght@100&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id='navBar'>
+            <a onclick="toggleNavBar(); scrollToHome()">Home</a>
+            <a onclick="toggleNavBar(); scrollToAbout()">About</a>
+            <a onclick="toggleNavBar(); scrollToProjects()">Projects</a>
+        </div>
+        <button id="nav" onclick="toggleNavBar()">☰</button>
+        <div id=mainContent>
+            <div id="home">
+                <h1></h1>
+                <div></div>
+            </div>
+            <div id="about">
+                <p>
+                    I recently graduated high school, and will major in computer science at University of Wisconsin.
+                    I'm still not sure what career path I'm interested in, so hopefully the skills and technologies
+                    I learn end up being useful in that whatever field I end up in. <br><br>
+                    The technologies I'm learning are Java, Javascript, Node.js, and Excel. <br><br>
+                    In my free time, you can usually find me on the golf course, 
+                    playing tactical board games / TCGs such as 7 Wonders and Magic: The Gathering, 
+                    or critically enjoying a movie.
+                </p>
+                <img src='face.jpg'>
+            </div>
+            <div id="projects">
+                <div id='projInner'>
+                    <h1>Project Portfolio</h1>
+                </div>
+            </div>
+        </div>
+        <footer id="socials">
+            <button onclick="openLinkedIn()"></button>
+            <button onclick="sendMail()"></button> 
+        </footer>
+
+        <script>
+            "use strict"
+            function sendMail(){
+                window.open('https://mail.google.com/mail/u/0/?fs=1&to=jblake8149@gmail.com&tf=cm', '_blank');
+            }
+            function openLinkedIn(){
+                window.open('https://www.linkedin.com/', '_blank');
+            }
+            const navBtn=document.getElementById('nav');
+            const navBar=document.getElementById('navBar');
+            // navBar.onmouseleave = toggleNavBar;
+            function toggleNavBar(){
+                if(navBar.style.left=='-100%'){
+                    navBtn.style.transform="rotate(90deg)";
+                    navBar.style.left = "0%";
+                } else {
+                    navBtn.style.transform="";
+                    navBar.style.left = "-100%";
+                }
+            }
+            const home = document.getElementById('home');
+            const about = document.getElementById('about');
+            const projects = document.getElementById('projects');
+            function scrollToHome(){
+                home.scrollIntoView({behavior:'smooth', block:'start'})
+            }
+            function scrollToAbout(){
+                about.scrollIntoView({behavior:'smooth', block:'center'});
+            }
+            function scrollToProjects(){
+                projects.scrollIntoView({behavior:'smooth', block:'start'});
+            }
+            setInterval( () => {home.lastElementChild.hidden=!home.lastElementChild.hidden}, 500);
+            let homeHeaderLetters = "Hello, I'm Jack Blake".split(''); 
+            for(let i = 0; i < homeHeaderLetters.length; i++){
+                setTimeout( () => {home.firstElementChild.textContent += homeHeaderLetters[i]}, i*200);
+            }
+
+            function setFaceMargin(){
+                let faceIMG = about.lastElementChild
+                faceIMG.style.marginTop = `${(about.firstElementChild.scrollHeight - faceIMG.scrollHeight)/2}px`;
+            }
+            window.onload = setFaceMargin;
+            window.onresize = setFaceMargin;
+
+            const projInner = document.getElementById('projInner');
+            function addProj(name, desc, link){
+                let proj = document.createElement('button');
+                proj.className = 'proj';
+                proj.innerHTML = `
+                <h2>${name}</h2>
+                <p>${desc}</p>
+                `
+                projInner.appendChild(proj);
+                proj.onclick = () => window.open(link, '_blank');
+            }
+            addProj('Minecraft Sky Wars Kill Alert Mod', 
+            'Displays an alert whenever somebody gets a kill so that you know when they have strength. Color (with chroma option), position, and chromaspeed are all configurable using commands', 
+            'https://github.com/JackBlake-zkq/SkyWarsKillAlert');
+            addProj('Chat Room',
+            'Socket.io chat room web app. Lacks any advanced features, but does store and load old meassages, display online users, and limit message loading', 
+            'http://localhost:3000/');
+            addProj('Lorem Ipsum', 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore', 
+            'https://google.com');
+            addProj('Lorem Ipsum', 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore', 
+            'https://google.com');
+            addProj('Lorem Ipsum', 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore', 
+            'https://google.com');
+            addProj('Lorem Ipsum', 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore', 
+            'https://google.com');
+            addProj('Lorem Ipsum', 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore', 
+            'https://google.com');
+            addProj('Lorem Ipsum', 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore', 
+            'https://google.com');
+
+        </script>
+
+    </body>
+</html>
