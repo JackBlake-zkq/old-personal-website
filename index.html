@@ -5,11 +5,11 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             :root{
-                --main-bg: #white;
-                --secondary-bg:rgb(245, 245, 245);
-                --content-bg:#FFF852;
-                --header-text:black;
-                --content-text:rgb(100, 100, 100);
+                --main-bg: white;
+                --content-bg:rgb(245, 245, 245);
+                --menu-bg:#FFF852;
+                --primary-text:black;
+                --secondary-text:rgb(100, 100, 100);
             }
             html{
                 font-size: 1rem;
@@ -25,7 +25,7 @@
                 font-size: 2rem;
                 background:none;
                 border:none;
-                color:var(--header-text);
+                color:var(--primary-text);
                 position: fixed;
                 z-index:1;
                 transition:transform 400ms ease-in-out, font-size 300ms ease-in-out;
@@ -38,7 +38,7 @@
             }
             #navBar{
                 position:fixed;
-                background:var(--content-bg);
+                background:var(--menu-bg);
                 padding-left: 1rem;
                 padding-right: 5rem;
                 border-bottom-right-radius: 100%;
@@ -47,7 +47,7 @@
             }
             #navBar a{
                 font-size: 1.2rem;
-                color:var(--content-text);
+                color:var(--secondary-text);
                 display: block;
                 text-decoration: none;
                 margin-bottom:0.5rem;
@@ -64,12 +64,12 @@
                 bottom:0;
                 width:100%;
                 display:flex;
-                background:var(--content-bg);
+                background:var(--menu-bg);
                 width:100%;
                 position:fixed;
             }
             footer button{
-                background-color:var(--header-text);
+                background-color:var(--primary-text);
                 border:none;
                 border-radius:100%;
                 width:3.4rem;
@@ -106,11 +106,11 @@
                 margin-top:20.3rem;
                 height:2rem;
                 width:0.1rem;
-                background:var(--header-text);
+                background:var(--primary-text);
                 margin-left:0.1rem;
             }
             #about{
-                background:var(--secondary-bg);
+                background:var(--content-bg);
                 display: flex;
                 justify-content: center;
                 padding:4rem;
@@ -132,35 +132,35 @@
                 }
             }
             #projects{
-                text-align: center;
+                padding:4rem;
             }
             #projInner{
-                margin:4rem;
                 text-align: center;
-                margin-top:1rem;
-                margin-bottom: 8.4rem;
-                margin-top: 3rem;
             }
             #projInner h1{
-                color:var(--header-text);
+                color:var(--primary-text);
             }
             .proj{
-                width:80%;
+                width:100%;
                 border: none;
-                background:var(--secondary-bg);
-                margin-bottom: 0.5rem;
+                background:var(--content-bg);
+                margin-bottom: 2rem;
+                transition: border-radius 400ms ease-in-out, filter 400ms ease-in-out;
             }
-            .proj:hover{
-                opacity:80%;
-            }
-            .proj h1{
-                color:var(--header-text);
+            .proj h2{
+                color:var(--primary-text);
                 font-size: 1.5rem;
+                font-weight: 100;
             }
             .proj p{
-                color:var(--content-text);
+                color:var(--secondary-text);
                 font-size: 1.2rem;
             }
+            .proj:hover{
+                border-radius: 2rem;
+                filter:brightness(92%);
+            }
+
         </style>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -168,9 +168,9 @@
     </head>
     <body>
         <div id='navBar'>
-            <a onclick="toggleNavBar(); scrollToHome()">Home</a>
-            <a onclick="toggleNavBar(); scrollToAbout()">About</a>
-            <a onclick="toggleNavBar(); scrollToProjects()">Projects</a>
+            <a onclick="toggleNavBar(); scrollToElem('home')">Home</a>
+            <a onclick="toggleNavBar(); scrollToElem('about')">About</a>
+            <a onclick="toggleNavBar(); scrollToElem('projects')">Projects</a>
         </div>
         <button id="nav" onclick="toggleNavBar()">☰</button>
         <div id=mainContent>
@@ -197,21 +197,22 @@
             </div>
         </div>
         <footer id="socials">
-            <button onclick="openLinkedIn()"></button>
-            <button onclick="sendMail()"></button> 
+            <button onclick="window.open('https://www.linkedin.com/in/jack-blake-59a898217/', '_blank');"></button>
+            <button onclick="window.open('https://mail.google.com/mail/u/0/?fs=1&to=jblake8149@gmail.com&tf=cm', '_blank')"></button> 
         </footer>
 
         <script>
             "use strict"
-            function sendMail(){
-                window.open('https://mail.google.com/mail/u/0/?fs=1&to=jblake8149@gmail.com&tf=cm', '_blank');
-            }
-            function openLinkedIn(){
-                window.open('https://www.linkedin.com/', '_blank');
-            }
+
             const navBtn=document.getElementById('nav');
             const navBar=document.getElementById('navBar');
-            // navBar.onmouseleave = toggleNavBar;
+            const home = document.getElementById('home');
+            const about = document.getElementById('about');
+            const projects = document.getElementById('projects');
+            const faceIMG = about.lastElementChild
+            const projInner = document.getElementById('projInner');
+            
+            //Moves the nav bar and rotates the hamburger, could've been done with classes but decided to do it this way
             function toggleNavBar(){
                 if(navBar.style.left=='-100%'){
                     navBtn.style.transform="rotate(90deg)";
@@ -221,32 +222,29 @@
                     navBar.style.left = "-100%";
                 }
             }
-            const home = document.getElementById('home');
-            const about = document.getElementById('about');
-            const projects = document.getElementById('projects');
-            function scrollToHome(){
-                home.scrollIntoView({behavior:'smooth', block:'start'})
+            // navBar.onmouseleave = toggleNavBar; Doesn't function very smoothly
+
+            //Scrolls to the element specified
+            function scrollToElem(loc){
+                let elem = loc == 'home' ? home : loc == 'about' ? about : projects;
+                elem.scrollIntoView({behavior:'smooth', block:'start'}); 
             }
-            function scrollToAbout(){
-                about.scrollIntoView({behavior:'smooth', block:'center'});
-            }
-            function scrollToProjects(){
-                projects.scrollIntoView({behavior:'smooth', block:'start'});
-            }
+            
+            //Typing Effect
             setInterval( () => {home.lastElementChild.hidden=!home.lastElementChild.hidden}, 500);
-            let homeHeaderLetters = "Hello, I'm Jack Blake".split(''); 
+            const homeHeaderLetters = "Hello, I'm Jack Blake".split(''); 
             for(let i = 0; i < homeHeaderLetters.length; i++){
                 setTimeout( () => {home.firstElementChild.textContent += homeHeaderLetters[i]}, i*200);
             }
 
-            function setFaceMargin(){
-                let faceIMG = about.lastElementChild
+            //Move headshot inline with the middle of the paragraph
+            const setFaceMargin = () => {
                 faceIMG.style.marginTop = `${(about.firstElementChild.scrollHeight - faceIMG.scrollHeight)/2}px`;
             }
             window.onload = setFaceMargin;
             window.onresize = setFaceMargin;
 
-            const projInner = document.getElementById('projInner');
+            //Function to add new projects to the portfolio
             function addProj(name, desc, link){
                 let proj = document.createElement('button');
                 proj.className = 'proj';
@@ -257,6 +255,7 @@
                 projInner.appendChild(proj);
                 proj.onclick = () => window.open(link, '_blank');
             }
+
             addProj('Chat Room',
             'Socket.io chat room web app. Lacks any advanced features, but does store and load old meassages, display online users, and limit message loading', 
             'https://github.com/JackBlake-zkq/ChatRoom');
@@ -272,16 +271,6 @@
             addProj('Lorem Ipsum', 
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore', 
             'https://google.com');
-            addProj('Lorem Ipsum', 
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore', 
-            'https://google.com');
-            addProj('Lorem Ipsum', 
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore', 
-            'https://google.com');
-            addProj('Lorem Ipsum', 
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore', 
-            'https://google.com');
-
         </script>
 
     </body>
